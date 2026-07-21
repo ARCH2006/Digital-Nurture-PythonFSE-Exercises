@@ -1,0 +1,70 @@
+.catalog-container {
+  margin: 0 auto;
+}
+
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(130deg, #edf4ff, #fff);
+  border: 1px solid #dce7f7;
+  border-radius: 1.25rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+h1 {
+  color: #102a56;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  letter-spacing: -.045em;
+  margin: 0;
+}
+
+.eyebrow { color: #2563a8; font-size: .78rem; font-weight: 800; letter-spacing: .12em; margin: 0 0 .35rem; text-transform: uppercase; }
+.subtitle { color: #52627a; margin: .6rem 0 0; }
+
+.search-field { display: grid; gap: .4rem; min-width: min(100%, 19rem); }
+.search-field label { color: #31415a; font-size: .85rem; font-weight: 700; }
+
+.search-input {
+  background: #fff;
+  border: 1px solid #afbdd1;
+  border-radius: .7rem;
+  padding: .75rem .9rem;
+  width: 100%;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #2563a8;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .16);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.spinner-container, .no-results-msg {
+  background: #fff;
+  border: 1px solid #dce3ee;
+  border-radius: 1rem;
+  color: #52627a;
+  display: grid;
+  justify-items: center;
+  margin: 2rem auto;
+  max-width: 34rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.loading-spinner { animation: spin .8s linear infinite; border: 3px solid #d8e3f4; border-radius: 50%; border-top-color: #2563a8; height: 2rem; width: 2rem; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 700px) {
+  .catalog-header { align-items: stretch; flex-direction: column; }
+}

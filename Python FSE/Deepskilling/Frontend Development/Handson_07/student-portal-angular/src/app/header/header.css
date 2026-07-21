@@ -1,0 +1,31 @@
+.site-header,
+header {
+  align-items: center;
+  background: linear-gradient(115deg, #102a56, #1d4f91);
+  box-shadow: 0 4px 18px rgba(15, 39, 78, .2);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem clamp(1.25rem, 6vw, 5rem);
+}
+
+.brand,
+header > a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  text-decoration: none;
+}
+
+nav { display: flex; gap: .4rem; }
+
+nav a {
+  border-radius: .5rem;
+  color: #dce9ff;
+  font-weight: 650;
+  padding: .55rem .8rem;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease;
+}
+
+nav a:hover, nav a.active { background: rgba(255, 255, 255, .16); color: #fff; }

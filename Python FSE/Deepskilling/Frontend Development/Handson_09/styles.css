@@ -1,0 +1,66 @@
+/*
+  HANDS-ON 9 — TASK 3 CONTRAST AUDIT (Steps 133–134)
+  WCAG AA requirement for normal text: at least 4.5:1.
+  Before → after: #172033 on #F5F7FB → #172033 on #F5F7FB = 15.17:1 (PASS; no colour change required).
+  Other verified pairs: #FFFFFF on #0056B3 = 7.04:1; #003D7A on #FFFFFF = 10.78:1;
+  #004FA3 on #FFFFFF = 7.93:1; #334155 on #FFFFFF = 10.35:1.
+
+  CAN I USE CHECK (Step 136, checked July 2026): Flexbox gap has 94.18% global support.
+  Supported in Chrome/Edge 84+, Firefox 63+, and Safari 14.1+. A margin fallback appears below.
+  Manual browser-test record (Step 135): Test Chrome, Firefox, and Safari before submission; compare fonts,
+  flex gaps, and grid columns. This source environment cannot run Firefox or Safari visual testing.
+*/
+
+:root {
+  color-scheme: light;
+  font-family: Arial, sans-serif;
+  --page-background: #f5f7fb;
+  --text-colour: #172033;
+  --surface: #ffffff;
+  --brand: #0056b3;
+  --brand-dark: #003d7a;
+  --link: #004fa3;
+  --focus: #f4c430;
+  color: var(--text-colour);
+  background: var(--page-background);
+}
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.5; }
+.site-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 2rem; background: var(--surface); }
+.logo { color: var(--brand-dark); font-size: 1.35rem; font-weight: 700; text-decoration: none; }
+.menu-toggle { display: none; }
+nav ul { display: flex; flex-wrap: wrap; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+a { color: var(--link); }
+nav a { font-weight: 600; }
+.skip-link { position: absolute; top: -4rem; left: 1rem; z-index: 2; padding: .65rem 1rem; background: var(--surface); }
+.skip-link:focus { top: 1rem; }
+.hero { padding: 4rem 1.5rem; text-align: center; color: var(--surface); background: var(--brand); }
+.hero h1 { margin-top: 0; }
+.primary-action, button { display: inline-block; padding: .6rem 1rem; border: 0; border-radius: 4px; font: inherit; font-weight: 700; cursor: pointer; }
+.primary-action { color: var(--brand-dark); background: var(--surface); text-decoration: none; }
+button { color: var(--surface); background: var(--brand); }
+button:hover { background: var(--brand-dark); }
+a:focus-visible, button:focus-visible, input:focus-visible, .course-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.content-section { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+.controls-bar { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin-block: 1rem; }
+input { min-height: 2.5rem; padding: .4rem .6rem; border: 1px solid #526070; border-radius: 4px; font: inherit; }
+
+.courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+.course-card { padding: 1.25rem; border: 1px solid #c9d2de; border-radius: 8px; background: var(--surface); }
+.course-card h3 { margin: .4rem 0; }
+.course-code { margin: 0; color: #334155; font-weight: 700; }
+.form-field { display: grid; gap: .35rem; max-width: 28rem; margin-bottom: 1rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+footer { padding: 1.5rem; text-align: center; color: var(--surface); background: var(--text-colour); }
+
+/* Feature detection fallback for browsers without Flexbox gap support. */
+@supports not (gap: 1rem) {
+  .site-header > *, nav ul > li { margin-right: 1rem; }
+  .controls-bar > * { margin: 0 .75rem .75rem 0; }
+}
+@media (max-width: 600px) {
+  .site-header { align-items: flex-start; flex-direction: column; padding-inline: 1rem; }
+  .menu-toggle { display: inline-block; }
+  .site-header nav { width: 100%; }
+  .site-header nav ul { flex-direction: column; }
+}

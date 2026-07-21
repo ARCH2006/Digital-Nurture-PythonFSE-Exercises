@@ -1,0 +1,36 @@
+<div class="catalog-container">
+  <div class="catalog-header">
+    <div>
+      <p class="eyebrow">Learning dashboard</p>
+      <h1>Available Course Catalog</h1>
+      <p class="subtitle">Explore your current courses and track your progress.</p>
+    </div>
+    <div class="search-field">
+      <label for="course-search">Search courses</label>
+      <input id="course-search" [(ngModel)]="searchTerm" type="search" placeholder="Name or course code" class="search-input" />
+    </div>
+  </div>
+
+  <div *ngIf="loading" class="spinner-container">
+    <div class="loading-spinner"></div>
+      <p>Loading your course catalog…</p>
+  </div>
+
+  <div *ngIf="!loading">
+    
+    <div class="courses-grid" *ngIf="filteredCourses.length > 0">
+      <app-course-card 
+        *ngFor="let course of filteredCourses" 
+        [name]="course.name"
+        [code]="course.code"
+        [credits]="course.credits"
+        [grade]="course.grade"
+      ></app-course-card>
+    </div>
+
+    <div *ngIf="filteredCourses.length === 0" class="no-results-msg">
+      <p>No courses found matching “{{ searchTerm }}”.</p>
+    </div>
+
+  </div>
+</div>

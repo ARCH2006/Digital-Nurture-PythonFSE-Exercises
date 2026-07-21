@@ -1,0 +1,21 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+main { max-width: 720px; margin: 4rem auto; padding: 2rem; }
+
+button { padding: 0.7rem 1rem; border: 0; border-radius: 0.4rem; background: #2f5bea; color: white; font: inherit; cursor: pointer; }
+
+.error { color: #b42318; }
+
+.error-boundary {
+  border: 1px solid #fecdca;
+  border-radius: 0.5rem;
+  background: #fffbfa;
+}

@@ -1,0 +1,43 @@
+.course-card {
+  background: #ffffff;
+  border: 1px solid #dce3ee;
+  border-radius: 1rem;
+  box-shadow: 0 5px 14px rgba(28, 52, 84, .06);
+  min-height: 11rem;
+  padding: 1.35rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course-card:hover {
+  border-color: #8fb3df;
+  transform: translateY(-4px);
+  box-shadow: 0 13px 25px rgba(28, 52, 84, .12);
+}
+
+.course-code {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  font-weight: 700;
+  margin-bottom: .55rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 1.2rem;
+  line-height: 1.4;
+}
+
+.card-body {
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.card-body p { margin: .45rem 0; }
+.grade-badge { background: #dcfce7; border-radius: 999px; color: #166534; font-weight: 800; padding: .2rem .55rem; }

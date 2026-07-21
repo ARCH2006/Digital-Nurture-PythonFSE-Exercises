@@ -1,0 +1,12 @@
+<div class="course-card">
+  <div class="card-header">
+    <span class="course-code">{{ code() }}</span>
+    <h3>{{ name() }}</h3>
+  </div>
+  <div class="card-body">
+    <p>Credits: <strong>{{ credits() }} Units</strong></p>
+    @if (grade(); as courseGrade) {
+      <p>Current Grade: <span class="grade-badge">{{ courseGrade }}</span></p>
+    }
+  </div>
+</div>

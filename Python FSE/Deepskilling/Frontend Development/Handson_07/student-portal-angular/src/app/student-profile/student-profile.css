@@ -1,0 +1,10 @@
+section { background: #fff; border: 1px solid #dce3ee; border-radius: 1.25rem; box-shadow: 0 10px 30px rgba(28, 52, 84, .07); margin: 1rem auto; max-width: 42rem; padding: clamp(1.5rem, 5vw, 2.5rem); }
+h1 { color: #102a56; margin-top: 0; }
+form { display: grid; gap: .55rem; margin-top: 1.5rem; }
+label { color: #31415a; font-weight: 700; margin-top: .7rem; }
+input { border: 1px solid #afbdd1; border-radius: .65rem; padding: .7rem .8rem; }
+input:focus { border-color: #2563a8; outline: none; box-shadow: 0 0 0 3px rgba(37, 99, 235, .16); }
+button { background: #1d4f91; border: 0; border-radius: .65rem; color: #fff; cursor: pointer; font-weight: 750; margin-top: 1rem; padding: .8rem 1rem; }
+button:hover:not(:disabled) { background: #102a56; }
+button:disabled { cursor: not-allowed; opacity: .55; }
+.error { color: #b42318; font-size: .9rem; margin: 0; }

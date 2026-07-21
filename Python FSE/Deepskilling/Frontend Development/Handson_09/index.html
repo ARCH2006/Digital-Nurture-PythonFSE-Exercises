@@ -1,0 +1,93 @@
+<!--
+  Lighthouse accessibility baseline: Run Chrome DevTools > Lighthouse > Accessibility and record the score here.
+  Source-review findings before remediation: missing search/profile labels, duplicate heading/section structure,
+  and mouse-only course selection. This version uses semantic landmarks, associated labels, visible focus states,
+  live status messages, and native buttons. No img elements are used in this portal.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accessible Student Portal course and profile dashboard.">
+  <title>EduPortal | Student Portal</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Feature detection is safer than testing a browser name.
+    function initializeCssVariables() {
+      const supportsCssVariables = window.CSS && CSS.supports && CSS.supports('--custom-property', '0');
+      if (!supportsCssVariables && typeof window.cssVars === 'function') {
+        window.cssVars({ watch: true });
+      }
+    }
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2/dist/css-vars-ponyfill.min.js" onload="initializeCssVariables()"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="EduPortal home">EduPortal</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+      Menu
+    </button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home" aria-current="page">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#grades">Grades</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="page-title">
+      <h1 id="page-title">Welcome to the Student Portal</h1>
+      <p>Manage your academic journey, track progress, and explore courses.</p>
+      <a class="primary-action" href="#courses">Explore courses</a>
+    </section>
+
+    <section class="content-section" id="courses" aria-labelledby="courses-heading">
+      <h2 id="courses-heading">Available Courses</h2>
+      <p id="total-credits" role="status" aria-live="polite"></p>
+      <div class="controls-bar">
+        <label for="search-courses">Search courses</label>
+        <input type="search" id="search-courses" placeholder="e.g. Python" autocomplete="off">
+        <button id="sort-credits" class="sort-btn" type="button" aria-pressed="false">Sort by credits</button>
+      </div>
+      <p id="course-status" class="sr-only" role="status" aria-live="polite"></p>
+      <div class="courses-grid" aria-label="Course results"></div>
+    </section>
+
+    <section class="content-section" id="profile" aria-labelledby="profile-heading">
+      <h2 id="profile-heading">Student Profile</h2>
+      <form id="profile-form">
+        <div class="form-field">
+          <label for="student-name">Full name</label>
+          <input id="student-name" name="student-name" type="text" value="Rohith V" required>
+        </div>
+        <div class="form-field">
+          <label for="student-email">Email address</label>
+          <input id="student-email" name="student-email" type="email" value="rohith@example.com" required>
+        </div>
+        <button type="submit">Save profile</button>
+        <p id="profile-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="content-section" id="grades" aria-labelledby="grades-heading">
+      <h2 id="grades-heading">Grades</h2>
+      <p>Your grades are displayed when you select a course.</p>
+      <p id="selected-course" role="status" aria-live="polite">No course selected.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 EduPortal. All rights reserved.</p>
+  </footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

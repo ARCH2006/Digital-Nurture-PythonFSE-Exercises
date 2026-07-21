@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPortal Pro Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-icon">🎓</span>
+                <div class="brand-text">EduPortal Pro</div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">📊</span> Dashboard
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📚</span> My Courses
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🔔</span> Notifications
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span> Settings
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-avatar">RV</div>
+                <div class="user-info">
+                    <div class="user-name">Rohith V</div>
+                    <div class="user-role">Undergraduate</div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            
+            <header class="dashboard-header">
+                <div class="welcome-box">
+                    <h1 id="dynamic-greeting">Welcome back!</h1>
+                    <p style="color: var(--text-secondary); margin-top: 0.25rem;">Here is your live academic overview for today.</p>
+                </div>
+                <div class="live-clock-box">
+                    <span class="clock-icon">🕒</span>
+                    <span id="live-clock">00:00:00 AM</span>
+                </div>
+            </header>
+
+            <section id="api-diagnostics">
+                <h2>System Async API Monitor</h2>
+                <p id="promise-log">Waiting for connection tasks to complete...</p>
+            </section>
+
+            <section id="notifications-panel">
+                <div class="courses-header-controls">
+                    <div>
+                        <h2>System Notifications</h2>
+                    </div>
+                    <div class="search-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="course-search-input" placeholder="Filter live notifications...">
+                    </div>
+                </div>
+                <div id="notifications-container"></div>
+            </section>
+
+            <section id="courses">
+                <div class="courses-header-controls">
+                    <div>
+                        <h2>Available Courses</h2>
+                        <span id="total-credits">Total Enrolled Credits: Calculating...</span>
+                    </div>
+                    <div class="search-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="course-search-input" placeholder="Search courses...">
+                    </div>
+                </div>
+                <div class="courses-grid" style="margin-top: 1.5rem;"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="app.js?v=2"></script>
+</body>
+</html>
