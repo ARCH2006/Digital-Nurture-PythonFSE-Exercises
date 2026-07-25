@@ -64,7 +64,7 @@ Digital-Nurture-PythonFSE-Exercises/
 
 | Module | Description | Quick Access |
 |---------|-------------|--------------|
-| 🗄️ **Database Integration** | SQL, CRUD Operations, Joins, Constraints, Transactions, Aggregations | **[📂 Open Module]([./Deepskilling/Database%20integration-week3](https://github.com/ARCH2006/Digital-Nurture-PythonFSE-Exercises/tree/main/Python%20FSE/Deepskilling/Database%20integration-week3))** |
+| 🗄️ **Database Integration** | SQL, CRUD Operations, Joins, Constraints, Transactions, Aggregations | **[📂 Open Module](https://github.com/ARCH2006/Digital-Nurture-PythonFSE-Exercises/tree/main/Python%20FSE/Deepskilling/Database%20integration-week3)** |
 | ⚙️ **Backend Development** | FastAPI, REST APIs, SQLAlchemy, Pydantic, CRUD, Authentication | **[📂 Open Module](./Backend%20Development/)** |
 | 💻 **Frontend Development** | HTML, CSS, JavaScript, Angular, Vue.js | **[📂 Open Module](./Frontend%20Development-week6/)** |
 | 🤖 **Selenium Automation** | WebDriver, XPath, CSS Selectors, Waits, Alerts, Frames | **[📂 Open Module](./Selenium/)** |
