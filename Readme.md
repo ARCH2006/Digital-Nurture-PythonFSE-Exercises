@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🚀 Digital Nurture 5.0 – Python Full Stack Engineering (FSE)
+#  Digital Nurture 5.0 – Python Full Stack Engineering (FSE)
 
-### Hands-on Exercises & Learning Portfolio
+### Hands-on Exercises
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)
@@ -16,7 +16,7 @@
 
 ---
 
-# 📖 About the Repository
+# About the Repository
 
 This repository documents my hands-on implementations completed as part of the **Digital Nurture 5.0 – Python Full Stack Engineering (FSE)** program.
 
@@ -66,9 +66,9 @@ Digital-Nurture-PythonFSE-Exercises/
 |---------|-------------|--------------|
 | 🗄️ **Database Integration** | SQL, CRUD Operations, Joins, Constraints, Transactions, Aggregations | **[📂 Open Module](https://github.com/ARCH2006/Digital-Nurture-PythonFSE-Exercises/tree/main/Python%20FSE/Deepskilling/Database%20integration-week3)** |
 | ⚙️ **Backend Development** | FastAPI, REST APIs, SQLAlchemy, Pydantic, CRUD, Authentication | **[📂 Open Module](https://github.com/ARCH2006/Digital-Nurture-PythonFSE-Exercises/tree/main/Python%20FSE/Deepskilling/Python%20Backend%20Frameworks-week5)** |
-| 💻 **Frontend Development** | HTML, CSS, JavaScript, Angular, Vue.js | **[📂 Open Module]((https://github.com/ARCH2006/Digital-Nurture-PythonFSE-Exercises/tree/main/Python%20FSE/Deepskilling/Frontend%20Development-week6))** |
-| 🤖 **Selenium Automation** | WebDriver, XPath, CSS Selectors, Waits, Alerts, Frames | **[📂 Open Module]((https://github.com/ARCH2006/Digital-Nurture-PythonFSE-Exercises/tree/main/Python%20FSE/Deepskilling/week7-Selenium%20basics))** |
-| 📖 **Software Engineering** | SOLID Principles, Design Patterns, Testing Concepts | **[📂 Open Module]((https://github.com/ARCH2006/Digital-Nurture-PythonFSE-Exercises/tree/main/Python%20FSE/Deepskilling/week1))** |
+| 💻 **Frontend Development** | HTML, CSS, JavaScript, Angular, Vue.js | **[📂 Open Module](https://github.com/ARCH2006/Digital-Nurture-PythonFSE-Exercises/tree/main/Python%20FSE/Deepskilling/Frontend%20Development-week6)** |
+| 🤖 **Selenium Automation** | WebDriver, XPath, CSS Selectors, Waits, Alerts, Frames | **[📂 Open Module](https://github.com/ARCH2006/Digital-Nurture-PythonFSE-Exercises/tree/main/Python%20FSE/Deepskilling/week7-Selenium%20basics)** |
+| 📖 **Software Engineering** | SOLID Principles, Design Patterns, Testing Concepts | **[📂 Open Module](https://github.com/ARCH2006/Digital-Nurture-PythonFSE-Exercises/tree/main/Python%20FSE/Deepskilling/week1)** |
 
 > **Note:** Update the folder names above if your repository uses different names.
 
@@ -87,50 +87,4 @@ Throughout this program, I gained hands-on experience in:
 
 ---
 
-# 🛠️ Technologies Used
-
-| Category | Technologies |
-|----------|--------------|
-| Programming Languages | Python, JavaScript, SQL, HTML5, CSS3 |
-| Backend | FastAPI, SQLAlchemy |
-| Database | MySQL, SQLite |
-| Frontend | Angular, Vue.js |
-| Testing | Selenium WebDriver |
-| Version Control | Git, GitHub |
-| IDE | Visual Studio Code |
-
----
-
-# 📈 Progress
-
-| Module | Status |
-|---------|--------|
-| Database Integration | ✅ Completed |
-| Backend Development | ✅ Completed |
-| Frontend Development | ✅ Completed |
-| Selenium Automation | ✅ Completed |
-| Software Engineering | ✅ Completed |
-
----
-
-# 📌 Highlights
-
-- ✅ Practical hands-on implementation for every module
-- ✅ Well-organized folder structure
-- ✅ Source code with supporting documentation
-- ✅ Covers backend, frontend, databases, and testing
-- ✅ Tracks learning progress across the Digital Nurture 5.0 curriculum
-
----
-
-<div align="center">
-
 ### ⭐ Thank you for visiting this repository!
-
-If you find this repository useful, consider giving it a ⭐.
-
-**Archana S**
-
-Python Full Stack Engineering (FSE)
-
-</div>
