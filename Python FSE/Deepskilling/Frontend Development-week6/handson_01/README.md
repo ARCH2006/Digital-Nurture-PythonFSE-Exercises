@@ -27,15 +27,6 @@ handson_01/
 └── styles.css    # Page styles
 ```
 
-## Installation
-
-```bash
-git clone <repository-url>
-cd Module2_FrontendDev/Rohith.V/handson_01
-```
-
-Open `index.html` in a web browser.
-
 ## Usage
 
 Use the navigation links to move between page sections and review the available courses. This is a static interface; the controls do not persist or modify data.
